@@ -41,7 +41,7 @@ function draw() {
     z=0;
   }
   theShader.setUniform("u_resolution", [windowWidth, windowHeight]);
-  theShader.setUniform("u_time", j*0.1);
+  theShader.setUniform("u_time", j*0.35);
   theShader.setUniform("u_mouse", [mouseX, map(mouseY, 0, height, height, 0),z]);
   // rect gives us some geometry on the screen
   rect(500,500,10000,10000);
