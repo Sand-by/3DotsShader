@@ -13,11 +13,11 @@ mat2 rotate(float angle){
 }
 
 void main(){
-  vec2 coord = (gl_FragCoord.xy*2.0 - u_resolution.xy)/u_resolution.y;
-  vec2 mouse = u_mouse.xy/u_resolution.xy - 0.5;
-  vec2 scaledUV = coord/2.;
-  coord -= mouse * (0.25-dot(scaledUV,scaledUV));
-  //vec2 coord = gl_FragCoord.xy/u_resolution;
+ // vec2 coord = (gl_FragCoord.xy*2.0 - u_resolution.xy)/u_resolution.y;
+  //vec2 mouse = u_mouse.xy/u_resolution.xy - 0.5;
+  //vec2 scaledUV = coord/2.;
+ // coord -= mouse * (0.25-dot(scaledUV,scaledUV));
+  vec2 coord = gl_FragCoord.xy/u_resolution;
   vec3 color = vec3(0.0);
   //vec2 translate = vec2(-0.5,-0.5);
   vec3 cl = vec3(0.2,0.2,0.2);
